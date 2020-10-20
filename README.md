@@ -17,7 +17,7 @@ $ pytest ex1_test.py
 
 Sobre o código:
 
-# Verfica se está vazia. O  .fixture é chamado durante a realização do teste. 
+#Verfica se está vazia. O  .fixture é chamado durante a realização do teste. 
 @pytest.fixture
 def pilha():
     return Pilha()
@@ -26,30 +26,30 @@ def test_isEmpty(pilha):
     pilha.isEmpty()
     assert True == pilha.isEmpty()
     
-# Verifica o primeiro elemento inserido
+#Verifica o primeiro elemento inserido
 def test_push(pilha): 
     pilha.push(32)
     assert 32 == pilha.items[0]
 
-# Verifica o comprimento da pilha somente na primeira dimensão (quando se trabalha com matrizes)
+#Verifica o comprimento da pilha somente na primeira dimensão (quando se trabalha com matrizes)
 def test_pop(pilha): pilha.push(3)
     pilha.push(18)
     pilha.pop()
     assert 1 == len(pilha.items)
     
-# Verifica o primeiro elemento da pilha    
+#Verifica o primeiro elemento da pilha    
 def test_peek(pilha): 
     pilha.push(15)
     pilha.push(0)
     assert 0 == pilha.peek() 
     
-# Verifica o número total de elementos na pilha    
+#Verifica o número total de elementos na pilha    
 def test_size(pilha): 
     pilha.push(11)
     pilha.push(4)
     assert 2 == pilha.size() 
 
-# Verfica se pode retirar elementos quando não há nada na pilha
+#Verfica se pode retirar elementos quando não há nada na pilha
 def test_pop_empty(pilha): 
     with pytest.raises(IndexError):
         pilha.pop()
