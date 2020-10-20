@@ -1,6 +1,7 @@
 # Pytest
 
 Este projeto é um exemplo de implementação de pilha com realizações de testes usando o Framework Pytest.
+
 As seguintes ações são testadas:
 - Pilha vazia
 - Elemento inserido
@@ -9,11 +10,14 @@ As seguintes ações são testadas:
 - Número total de elementos
 - Retirar elementos da pilha
 
+
 Instalar o Pytest:
-$ pip install -U pytest
+
+$pip install -U pytest
 
 Executar o código:
-$ pytest ex1_test.py 
+
+$pytest ex1_test.py 
 
 Sobre o código:
 
