@@ -21,7 +21,8 @@ As seguintes ações são testadas:
 
 ### Sobre o código:
 
-Verfica se está vazia. O  .fixture é chamado durante a realização do teste. 
+Esse método verfica se está vazia. 
+O  .fixture é chamado durante a realização do teste. 
 
 ```python
 @pytest.fixture
@@ -34,14 +35,14 @@ def test_isEmpty(pilha):
 ```
   
 
-Verifica o primeiro elemento inserido
+Esse método verifica se o elemento está sendo inserido na pilha.
 ```python
 def test_push(pilha): 
     pilha.push(32)
     assert 32 == pilha.items[0]
 ```
 
-Verifica o comprimento da pilha somente na primeira dimensão (quando se trabalha com matrizes)
+Esse método verifica o comprimento da pilha, mas somente na primeira dimensão (quando se trabalha com matrizes).
 ```python
 def test_pop(pilha): pilha.push(3)
     pilha.push(18)
@@ -49,7 +50,7 @@ def test_pop(pilha): pilha.push(3)
     assert 1 == len(pilha.items)
 ```
     
-Verifica o primeiro elemento da pilha    
+Esse método verifica se o último elemento inserido na pilha é o primeiro elemento da  pilha.    
 ```python
 def test_peek(pilha): 
     pilha.push(15)
@@ -57,7 +58,7 @@ def test_peek(pilha):
     assert 0 == pilha.peek() 
 ```
     
-Verifica o número total de elementos na pilha    
+Esse método verifica o número total de elementos na pilha.    
 ```python
 def test_size(pilha): 
     pilha.push(11)
@@ -65,7 +66,7 @@ def test_size(pilha):
     assert 2 == pilha.size() 
 ```
 
-Verfica se pode retirar elementos quando não há nada na pilha
+Esse método verifica se pode retirar elementos da pilha quando a pilha está vazia.
 ```python
 def test_pop_empty(pilha): 
     with pytest.raises(IndexError):
