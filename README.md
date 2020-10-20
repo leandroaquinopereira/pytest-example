@@ -11,17 +11,18 @@ As seguintes ações são testadas:
 - Retirar elementos da pilha
 
 
-Instalar o Pytest:
+### Instalar o Pytest:
 
-$pip install -U pytest
+$ pip install -U pytest
 
-Executar o código:
+### Executar o código:
 
-$pytest ex1_test.py 
+$ pytest ex1_test.py 
 
-Sobre o código:
+### Sobre o código:
 
 #Verfica se está vazia. O  .fixture é chamado durante a realização do teste. 
+'''python
 @pytest.fixture
 def pilha():
     return Pilha()
@@ -29,7 +30,8 @@ def pilha():
 def test_isEmpty(pilha): 
     pilha.isEmpty()
     assert True == pilha.isEmpty()
-    
+'''   
+
 #Verifica o primeiro elemento inserido
 def test_push(pilha): 
     pilha.push(32)
